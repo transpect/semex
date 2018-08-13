@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <table-head>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="id" class="s">ID</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="code" class="s">Code: Land, Organisation<br/>Code: Country, organisation</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="number" class="s">Werkstoff-<br/>nummer<br/>Material no.</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="label" class="s">Bezeichnung<br/>Designation</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="std-number" class="s">Norm<br/>Standard</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="std-date" class="s">Ausgabe-<br/>datum<br/>Publication date</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="tab-id" class="s">Tabellen-<br/>ID</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="gueltig" class="s">Gültig</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="ersatz" class="s">Ersatz</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="title_de" class="s">Erzeugnis1</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="erzeugnis_2" class="s">Erzeugnis2</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="erzeugnis_3" class="s">Erzeugnis3</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="erzeugnis_4" class="s">Erzeugnis4</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="erzeugnis_5" class="s">Erzeugnis5</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="erzeugnis_6" class="s">Erzeugnis6</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="title_en" class="s">Product1</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_P1" class="s">Product2</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_Q1" class="s">Product3</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_R1" class="s">Product4</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_S1" class="s">Product5</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_T1" class="s">Product6</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_U1" class="s">Wärme-<br/>behandlung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_V1" class="s">Treatment condition</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="probenlage" class="s">Probenlage</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="probenlage_en" class="s">Position of specimen</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="temperatur" class="s">Temperatur</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="nennmass_min" class="s">Nennmaß in mm</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="nennmass_max" class="s">Nennmaß max</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_min" class="s">obere Streckgrenze min ReH in N/mm² </th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_max" class="s">obere Streckgrenze max ReH in N/mm²</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_bemerkung" class="s">obere Streckgrenze Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_quelle_url" class="s">obere Streckgrenze Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_quelle" class="s">obere Streckgrenze Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_bemerkung_en" class="s">Upper yield point notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_quelle_url_en" class="s">Upper yield point source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="streckgrenze_quelle_en" class="s">Upper yield point source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_min" class="s">Zugfestigkeit - min Rm N/mm2</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_max" class="s">Zugfestigkeit - max Rm N/mm2</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_bemerkung" class="s">Zugfestigkeit - Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_quelle_url" class="s">Zugfestigkeit - Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_quelle" class="s">Zugfestigkeit - Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_bemerkung_en" class="s">tensile strenght notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_quelle_url_en" class="s">tensile strenght source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="zugfestigkeit_quelle_en" class="s">tensile strenght source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_max" class="s">Dehngrenze<br/>Rp0,2 N/mm<sup>2</sup><br/>max</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_min" class="s">Dehngrenze<br/>Rp0,2 N/mm<sup>2</sup><br/>min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_bemerkung" class="s">Dehngrenze - Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_quelle_url" class="s">Dehngrenze - Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_quelle" class="s">Dehngrenze - Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_bemerkung_en" class="s">yield strength notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_quelle_url_en" class="s">yield strength source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="dehngrenze_quelle_en" class="s">yield strength source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung" class="s">Bruch-<br/>dehnung Messlänge in mm</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_min" class="s">Bruch-<br/>dehnung - min<br/>in %</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_max" class="s">Bruch-<br/>dehnung - max<br/>in %</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_bemerkung" class="s">Bruch-<br/>dehnung - Bemerkung</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_quelle_url" class="s">Bruch-<br/>dehnung - Quelle url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_quelle" class="s">Bruch-<br/>dehnung - Quelle</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_bemerkung_en" class="s">elongation at fracture - note</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_quelle_url_en" class="s">elongation at fracture - source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="bruchdehnung_quelle_en" class="s">elongation at fracture - source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit" class="s">Kerbschlag-<br/>arbeit<br/>KV min. in J bei Prüf-<br/>temperatur</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_bemerkung" class="s">Kerbschlag-<br/>arbeit - Bemerkung</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_quelle_url" class="s">Kerbschlag-<br/>arbeit - Quelle url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_quelle" class="s">Kerbschlag-<br/>arbeit - Quelle</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_bemerkung_en" class="s">notched bar impact work - notes</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_quelle_url_en" class="s">notched bar impact work - source url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kerbschlagarbeit_quelle_en" class="s">notched bar impact work - source</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BP1" class="s">Vickershärte in N/mm²</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BQ1" class="s">Vickershärte Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BR1" class="s">Vickershärte quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BS1" class="s">Vickershärte quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BT1" class="s">vickers hardness notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BU1" class="s">vickers hardness source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BV1" class="s">vickers hardness source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BW1" class="s">Brinellhärte min in N/mm²</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BX1" class="s">Brinellhärte max in N/mm²</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BY1" class="s">Härte Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_BZ1" class="s">Quelle Härte</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CA1" class="s">Quelle Härte url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CB1" class="s">Brinell hardness notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CC1" class="s">Brinell hardness source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CD1" class="s">Brinell hardness source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CE1" class="s">Härte HRC min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kohlenstoffaequivalent" class="s">Kohlenstoff-<br/>äquivalent in %</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kohlenstoffaequivalent_quelle_url" class="s">Quelle url<br/>Kohlenstoff-<br/>äquivalent</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kohlenstoffaequivalent_quelle" class="s">Quelle<br/>Kohlenstoff-<br/>äquivalent</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kohlenstoffaequivalent_quelle_url_en" class="s">Carbon equivalent source url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="kohlenstoffaequivalent_quelle_en" class="s">Carbon equivalent source</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CK1" class="s">Dichte in Mg/m<sup>3</sup></th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CL1" class="s">Dichte Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CM1" class="s">Dichte Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CN1" class="s">Density source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CO1" class="s">Density source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CP1" class="s">mittlerer Linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient α (Bezugtemperatur: 20°C) in 10<sup>-6</sup>/K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CQ1" class="s">mittlerer Linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CR1" class="s">mittlerer Linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CS1" class="s">mean linear coefficient of thermal expansion source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CT1" class="s">mean linear coefficient of thermal expansion source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CU1" class="s">differentieller linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient β in 10<sup>-6</sup>/K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CV1" class="s">Quelle url differentieller linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CW1" class="s">Quelle differentieller linearer Wärmeaus-<br/>dehnungs-<br/>koeffizient</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CX1" class="s">Differential linear coefficient of thermal expansion source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CY1" class="s">Differential linear coefficient of thermal expansion source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_CZ1" class="s">Elastizitäts-<br/>modul Gpa</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DA1" class="s">Bemerkung Elastizitäts-<br/>modul Gpa</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DB1" class="s">Quelle url Elastizitäts-<br/>modul </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DC1" class="s">Quelle Elastizitäts-<br/>modul </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DD1" class="s">Elasticity module notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DE1" class="s">Elasticity module source url </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DF1" class="s">Elasticity module source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DG1" class="s">mittlere spezifische Wärme-<br/>kapazität in J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DH1" class="s">mittlere spezifische Wärme-<br/>kapazität Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DI1" class="s">Quelle url<br/>mittlere spezifische Wärme-<br/>kapazität in J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DJ1" class="s">Quelle<br/>mittlere spezifische Wärme-kapazität in J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DK1" class="s">mean specific thermal capacity notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DL1" class="s">mean specific thermal capacity source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DM1" class="s">mean specific thermal capacity source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DN1" class="s">wahre spezifische Wärme-<br/>kapazität J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DO1" class="s">Quelle url<br/>wahre spezifische Wärme-<br/>kapazität J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DP1" class="s">Quelle<br/>wahre spezifische Wärme-<br/>kapazität J/kg*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DQ1" class="s">specific thermal capacity source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DR1" class="s">specific thermal capacity source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DS1" class="s">spezifischer elektrischer Widerstand ρ in μΩ*m</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DT1" class="s">Bemerkung spezifischer elektrischer Widerstand</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DU1" class="s">Quelle url<br/>spezifischer elektrischer Widerstand</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DV1" class="s">Quelle<br/>spezifischer elektrischer Widerstand</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DW1" class="s">specific electrical resistance notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DX1" class="s">specific electrical resistance source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DY1" class="s">specific electrical resistance source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_DZ1" class="s">Wärmeleit-<br/>fähigkeit λ in W/m*K</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EA1" class="s">Bemerkung Wärmeleit-<br/>fähigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EB1" class="s">Quelle url<br/>Wärmeleit-<br/>fähigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EC1" class="s">Quelle<br/>Wärmeleit-<br/>fähigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_ED1" class="s">thermal conductivity notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EE1" class="s">thermal conductivity source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EF1" class="s">thermal conductivity source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EG1" class="s">Temperatur-<br/>leitfähigkeit a in m<sup>2</sup>/s</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EH1" class="s">Temperatur-<br/>leitfähigkeit Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EI1" class="s">Quelle url<br/>Temperatur-<br/>leitfähigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EJ1" class="s">Quelle Temperatur-<br/>leitfähigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EK1" class="s">thermal diffusivity source notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EL1" class="s">thermal diffusivity source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EM1" class="s">thermal diffusivity source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EN1" class="s">Magneti-<br/>sierbar</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EO1" class="s">Magneti-<br/>sierbarkeit Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EP1" class="s">Quelle url<br/>Magneti-<br/>sierbar</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EQ1" class="s">Quelle<br/>Magneti-<br/>sierbar</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_ER1" class="s">magneti-<br/>sability</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_ES1" class="s">magneti-<br/>sability notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_ET1" class="s">magneti-<br/>sability source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EU1" class="s">magneti-<br/>sability source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EV1" class="s">Korrosions-<br/>beständigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EW1" class="s">Beständigkeit gegen interkristalline Korrosion<br/>im geschweißten Zustand</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EX1" class="s">Beständigkeit gegen interkristalline Korrosion<br/>im Lieferzustand</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EY1" class="s">Korrosion Angriffsmittel/ Korrosion Konzentration</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_EZ1" class="s">Korrosion Konzen-<br/>tration</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FA1" class="s">Korrosionsart</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FB1" class="s">Bemerkung Korrosions-<br/>beständigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FC1" class="s">Quelle Korrosions-<br/>beständigkeit url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FD1" class="s">Quelle Korrosions-<br/>beständigkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FE1" class="s">resistance to corrosion</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FF1" class="s">Resistance to intergranular corrosion as delivered </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FG1" class="s">Resistance to intergranular corrosion as welded </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FH1" class="s">Corrosive agents/ Concen-<br/>tration</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FI1" class="s">Corrosion<br/>Concen-<br/>tration</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FJ1" class="s">form of corrosion</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FK1" class="s">resistance to corrosion notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FL1" class="s">resistance to corrosion source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FM1" class="s">resistance to corrosion source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FN1" class="s">Schmied-<br/>barkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FO1" class="s">Bemerkung Schmiedbarkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FP1" class="s">Schmiedbarkeit Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FQ1" class="s">Schmiedbarkeit Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FR1" class="s">malleability</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FS1" class="s">malleability notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FT1" class="s">malleability source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FU1" class="s">malleability source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FV1" class="s">Spanbarkeit </th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FW1" class="s">Spanbarkeit<br/>Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FX1" class="s">Spanbarkeit<br/>Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FY1" class="s">Bemerkung Spanbarkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_FZ1" class="s">machinability</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GA1" class="s">machinability source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GB1" class="s">machinability source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GC1" class="s">machinability notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GD1" class="s">Umform-<br/>barkeit</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GE1" class="s">Bemerkung<br/>Umformung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GF1" class="s">Quelle url<br/>Umformung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GG1" class="s">Quelle<br/>Umformung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GH1" class="s">formability</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GI1" class="s">formability notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GJ1" class="s">formability source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GK1" class="s">formability source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GL1" class="s">Händler-<br/>bezeichnung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GM1"></th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GN1" class="s">Warmform-<br/>gebung<br/>Temperatur<br/>min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GO1" class="s">Warmform-<br/>gebung<br/>Temperatur<br/>max</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GP1" class="s">Warmform-<br/>gebung<br/>Abkühlungs-<br/>art</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GQ1" class="s">Warmform-<br/>gebung<br/>Bemerkung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GR1" class="s">Warmform-<br/>gebung<br/>Quelle url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GS1" class="s">Warmform-<br/>gebung<br/>Quelle</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GT1" class="s">hot forming<br/>type of cooling</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GU1" class="s">hot forming<br/>notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GV1" class="s">hot forming source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_GW1" class="s">hot forming source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_min" class="s">Wärmebe-<br/>handlung<br/>Temperatur min.</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_max" class="s">Wärmebe-<br/>handlung<br/>Temperatur max.</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_art" class="s">Wärmebehandlung</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_abkuehlung" class="s">Wärmebe-<br/>handlung Abkühlungs-<br/>art</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_quelle_url" class="s">Wärmebe-<br/>handlung Quelle url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_quelle" class="s">Wärmebe-<br/>handlung Quelle </th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_bemerkung" class="s">Bemerkung Wärmebe-<br/>handlung </th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_en" class="s">heat treatment</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_abkuehlung_en" class="s">heat treatment type of cooling</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_quelle_url_en" class="s">heat treatment source url</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_quelle_en" class="s">heat treatment source</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="waermebehandlung_bemerkung_en" class="s">heat treatment notes</th>
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HJ1" class="s">Schweiß-<br/>eignung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HK1" class="s">Bemerkung Schweißen</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HL1" class="s">Schweiß-<br/>verfahren</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HM1" class="s">Schweiß-<br/>zusatz</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HN1" class="s">Quelle url<br/>Schweißen</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HO1" class="s">Quelle Schweißen</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HP1" class="s">weldability</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HQ1" class="s">weldability notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HR1" class="s">welding process</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HS1" class="s">filler metal</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HT1" class="s">weldability source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HU1" class="s">weldability source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HV1" class="s">min. Schnitt-<br/>geschwin-<br/>digkeit<br/>m/min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HW1" class="s">max. Schnitt-<br/>geschwin-<br/>digkeit<br/>m/min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HX1" class="s">Quelle<br/>Schnitt-<br/>bedingung<br/>m/min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HY1" class="s">Quelle url<br/>Schnitt-<br/>bedingung<br/>m/min</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_HZ1" class="s">Bemerkung Schnitt-<br/>bedingung</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IA1" class="s">Schmier-<br/>Kühlmittel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IB1" class="s">cutting speed source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IC1" class="s">cutting speed source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_ID1" class="s">cutting speed notes</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IE1" class="s">coolant</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IF1" class="s">min. Spanwinkel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IG1" class="s">max. Spanwinkel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IH1" class="s">Quelle url<br/>Spanwinkel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_II1" class="s">Quelle Spanwinkel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IJ1" class="s">Bemerkung Spanwinkel</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IK1" class="s">angle of rake source url</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IL1" class="s">angle of rake source</th><!--§§§-->
+    <th xmlns="http://www.w3.org/1999/xhtml" id="Tabelle1_IM1" class="s">angle of rake notes</th><!--§§§-->
+  </table-head>
+  

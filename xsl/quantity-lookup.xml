@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+  <SemEx:quantity-lookup-criteria xmlns:SemEx="http://le-tex.de/ns/SemEx">
+        
+    <!-- primary quantities -->        
+    
+    <quantity name="bezeichnung" type="primary">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading regex="yes">(Stahlk|K)urzname</heading>
+        </heading-sequence>
+      </condition>
+    </quantity>
+    <quantity name="bruchdehnung_min" type="primary" secondary-quantities="nennmass temperatur probenlage">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading>Bruchdehnung</heading>
+          <heading>A</heading>
+          <heading>min</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>%</unit>
+      </condition>
+    </quantity>
+    <quantity name="dehngrenze_min" type="primary" secondary-quantities="temperatur">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading>Rp0,2</heading>
+          <heading>min</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>N/mm2</unit>
+      </condition>
+    </quantity>
+    <quantity name="kerbschlagarbeit" type="primary" secondary-quantities="temperatur probenlage">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading regex="yes">Kerb\p{Pd}?schlag\p{Pd}?arbeit</heading>
+          <heading>KV</heading>
+          <heading regex="yes">(min\.|Mindest)</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>J</unit>
+      </condition>
+    </quantity>
+    <quantity name="kohlenstoffaequivalent" type="primary" secondary-quantities="nennmass">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <or>
+            <heading>CEV</heading>
+            <heading>Kohlenstoffäquivalent</heading>
+          </or>
+          <or>
+            <heading>max</heading>
+            <heading>Höchstwert</heading>
+          </or>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>%</unit>
+      </condition>
+    </quantity>
+    <quantity name="streckgrenze_min" type="primary" secondary-quantities="nennmass">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading>Streckgrenze</heading>
+          <heading regex="yes">ReH?</heading>
+          <heading>min</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">            
+        <unit>MPa</unit>            
+      </condition>
+    </quantity>
+    <quantity name="waermebehandlung" type="primary" secondary-quantities="waermebehandlung_art waermebehandlung_abkuehlung">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <or>
+            <heading>Härten</heading>
+            <heading>Anlassen</heading>
+            <heading>Normalglühen</heading>
+          </or>
+          <heading>Temperatur</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>°C</unit>
+      </condition>
+    </quantity>
+    <quantity name="waermebehandlung_abkuehlung" type="primary">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading>Abkühlmedium</heading>
+        </heading-sequence>        
+      </condition>
+    </quantity>
+    <quantity name="werkstoffnummer" type="primary">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading regex="yes">Werkstoff.*nummer</heading>
+        </heading-sequence>
+      </condition>
+    </quantity>
+    <quantity name="zugfestigkeit" type="primary" secondary-quantities="nennmass temperatur">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <heading>Zugfestigkeit</heading>
+          <heading>Rm</heading>
+        </heading-sequence>
+      </condition>
+      <condition type="unit">
+        <unit>MPa</unit>
+      </condition>
+    </quantity>
+    
+    <!-- /primary quantities -->
+    
+    
+    
+    <!-- secondary quantities -->
+    
+    <quantity name="nennmass" type="secondary">
+      <condition type="identify">
+        <heading-sequence direction="down" xml:lang="de">
+          <or>
+            <heading regex="yes">Nenn[&#x2d;]?wand[&#x2d;]?dicke</heading>
+            <heading>Wand[&#x2d;]?(stärke|dicke)</heading>
+          </or>
+        </heading-sequence>
+        <value regex="yes">\d+</value>
+      </condition>
+      <condition type="unit">
+        <unit regex="yes">mm</unit>
+      </condition>
+    </quantity>        
+    <quantity name="probenlage" type="secondary">
+      <condition type="identify">            
+        <or>
+          <value>längs</value>
+          <value>quer</value>
+          <value regex="yes">^l$</value>
+          <value regex="yes">^t$</value>
+        </or>
+      </condition>
+    </quantity>
+    <quantity name="temperatur" type="secondary">
+      <condition type="identify">
+        <or>
+          <heading-sequence direction="down" xml:lang="de">
+            <heading regex="yes">(Prüft|T|)emperatur</heading>
+          </heading-sequence>
+          <footnote regex="yes">Raumtemperatur</footnote>
+          <table-title regex="yes">Raumtemperatur</table-title>
+        </or>
+        <value regex="yes">(^[\p{Sm}\p{Pd}\p{Zs}]*\d+[°C\p{Zs}]*?$|Raumtemperatur)</value>
+      </condition>
+      <condition type="unit">
+        <unit regex="yes">°C</unit>
+      </condition>
+      <use replace="^.*Raumtemperatur.*$" by="20"/>
+    </quantity>
+    <quantity name="waermebehandlung_art" type="secondary">
+      <condition type="identify">            
+        <or>
+          <value>Härten</value>
+          <value>Anlassen</value>
+          <value>Normalglühen</value>
+        </or>
+      </condition>
+      <use replace=", Temperatur" by=""/>
+    </quantity>    
+    
+    <!-- /secondary quantities -->
+    
+  </SemEx:quantity-lookup-criteria>
+  
