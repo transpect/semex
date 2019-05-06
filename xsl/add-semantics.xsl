@@ -5,10 +5,17 @@
   exclude-result-prefixes="xs"
   version="2.0">
   
+  <xsl:param name="vocab" as="xs:string" select="'JATS'">
+    <!-- other possibilities: 'HTML', 'XHTML' (namespaced HTML), 'DocBook' (namespaced),
+      'DocBook4' (non-namespaced) -->
+  </xsl:param>
+  
+  <xsl:param name="CHPD" as="xs:string" select="''"/>
+  
   <xsl:variable name="quantity-lookup-criteria" select="collection()[2]"/>  
   <xsl:variable name="header-keywords" as="xs:string+" select="'Kurzname', 'Stahlkurzname', 'Werkstoffnummer'"/> 
   <xsl:variable name="pseudo-header-keywords" as="xs:string+" select="'Nennwanddicke', 'emperatur'"/>
-  <xsl:variable name="exclude-elements" as="xs:string+" select="'xref'"/>
+  <xsl:variable name="exclude-elements" as="xs:string+" select="('xref', 'indexterm', 'footnote')"/>
   <xsl:variable name="exclude-quantities" as="xs:string+" select="'bezeichnung', 'waermebehandlung_abkuehlung', 'werkstoffnummer'"/>  
   <xsl:variable name="quantity-lookup-elements" as="xs:string+" select="'td', 'th', 'caption'"/>
   <xsl:variable name="not-available-strings" as="xs:string+" select="'-', '', '–'"/>
@@ -20,7 +27,7 @@
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="*:td | *:th[SemEx:is-pseudo-head(.)] | *:table-wrap | *:caption" mode="add-quantities">
+  <xsl:template match="*:td[SemEx:process(.)] | *:th[SemEx:is-pseudo-head(.)] | *:table-wrap | *:caption" mode="add-quantities"> 
     <xsl:copy copy-namespaces="yes">
       <xsl:attribute name="SemEx:thead" select="SemEx:belongs-to-head(.)"/>
       <xsl:apply-templates select="@*" mode="#current"/>
@@ -34,6 +41,7 @@
       <xsl:apply-templates select="@*" mode="#current"/>
       <xsl:apply-templates select="node()" mode="#current"/>
       <xsl:sequence select="SemEx:enhance-quantities(.)"/>
+      
     </xsl:copy>
   </xsl:template>
   
@@ -43,11 +51,15 @@
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
+  <xsl:function name="SemEx:process" as="xs:boolean">
+    <xsl:param name="context" as="element()"/>
+    <xsl:sequence select="true()"/>
+  </xsl:function>
   
   <xsl:function name="SemEx:belongs-to-head" as="xs:boolean">
     <xsl:param name="context" as="node()"/>
     <xsl:value-of 
-      select="if ($context[self::*:th or self::*:caption]) then true() else
+      select="if ($context[self::*:th[ancestor::*:thead] or self::*:caption]) then true() else
       if ($context/ancestor-or-self::*:tr[1]/*[1 or 2][some $keyword in $header-keywords satisfies contains(., $keyword)]) 
       then true() else false()"/>
   </xsl:function>
@@ -55,8 +67,10 @@
   <xsl:function name="SemEx:is-pseudo-head" as="xs:boolean">
     <xsl:param name="context" as="node()"/>
     <xsl:value-of select="
-      if ($context/ancestor-or-self::*:tr[1]/*[1 or 2][some $keyword in $header-keywords satisfies contains(., $keyword)]) then true() else
-      if ($context/ancestor::*:thead and (some $p in $pseudo-header-keywords satisfies contains(replace($context, '&#x2d;', ''), $p))) then true()
+      if ($context/ancestor-or-self::*:tr[1]/*[1 or 2][some $keyword in $header-keywords satisfies contains(., $keyword)]) 
+          then true() 
+      else if ($context/ancestor::*:thead and (some $p in $pseudo-header-keywords satisfies contains(replace($context, '&#x2d;', ''), $p))) 
+          then true()
       else false()"/>
   </xsl:function>
   
@@ -85,23 +99,30 @@
     </xsl:analyze-string>
   </xsl:function>
   
+  <xsl:function name="SemEx:table-root" as="element(*)">
+    <xsl:param name="context" as="element(*)"/>
+    <xsl:sequence select="$context/ancestor::*[local-name() = ('table', 'informaltable')][1]"/>
+  </xsl:function>
   
   <xsl:function name="SemEx:quantity-lookup" as="element(SemEx:quantity-lookup)*">
-    <xsl:param name="context" as="element(*)"/><!-- caption, td, th or table-wrap -->
+    <xsl:param name="context" as="element(*)"/><!-- caption, td, th, table, informaltable or table-wrap -->
     <xsl:param name="criteria" as="document-node(element(SemEx:quantity-lookup-criteria))"/>
-    
+
     <xsl:variable name="col-heading" as="node()*"
-      select="$context/ancestor::*:table[1]//*:th[. &lt;&lt; $context][not(SemEx:is-pseudo-head(.))]
-                                                 [xs:integer(@data-colnum) eq xs:integer($context/@data-colnum)]
+      select="SemEx:table-root($context)//*:th[. &lt;&lt; $context][not(SemEx:is-pseudo-head(.))]
+                                                 [xs:integer(@data-colnum) eq xs:integer($context/ancestor-or-self::*[@data-colnum][1]/@data-colnum)]
                                                  (:[xs:integer(@data-rownum) lt xs:integer($context/@data-rownum)]:)"/>
     <xsl:variable name="pseudo-col-heading" as="node()*"
-      select="$context/ancestor::*:table[1]//*[. &lt;&lt; $context][SemEx:is-pseudo-head(.)]
-                                              [xs:integer(@data-colnum) eq xs:integer($context/@data-colnum)],
+      select="SemEx:table-root($context)//*[. &lt;&lt; $context][SemEx:is-pseudo-head(.)]
+                                              [xs:integer(@data-colnum) eq xs:integer($context/ancestor-or-self::*[@data-colnum][1]/@data-colnum)],
               if (SemEx:is-pseudo-head($context)) then $context else ()"/>
     <xsl:variable name="expanded-col-heading" as="node()*" 
       select="$col-heading, $pseudo-col-heading"/>
     <xsl:variable name="relevant-col-heading" as="node()*" 
       select="if (SemEx:is-pseudo-head($context)) then $pseudo-col-heading else $expanded-col-heading"/>
+    
+    
+    
     
     <xsl:variable name="matching-quantities" as="element()*"
       select="$quantity-lookup-criteria//*:quantity
@@ -120,11 +141,13 @@
           )
       ]
       [   not(exists(descendant::*:condition[@type eq 'identify']//*:value)) 
-       or (some $v in descendant::*:condition[@type eq 'identify']//*:value satisfies matches(string-join($context/node()[not(local-name()=$exclude-elements)], ''), $v))]"/>    
+       or (some $v in descendant::*:condition[@type eq 'identify']//*:value 
+           satisfies matches(string-join($context/node()[not(local-name()=$exclude-elements)], ''), $v))]"/>    
+    
+    
     
     <xsl:variable name="relevant-quantities" as="element()*"
       select="$matching-quantities[@*:type eq (if ($context[SemEx:belongs-to-head(.)]) then 'secondary' else 'primary')]"/>
-    
     <xsl:if test="$relevant-quantities">
       <quantity-lookup xmlns="http://le-tex.de/ns/SemEx">
         <xsl:for-each select="$relevant-quantities">
@@ -152,6 +175,11 @@
             <xsl:for-each select="SemEx:find-min-and-max($value-str)/self::*:max[normalize-space()]">
               <max-value include="{if (matches($value-str, '^[&#x3c;]')) then 'no' else 'yes'}"><xsl:value-of select="."/></max-value>
             </xsl:for-each>
+            <xsl:if test="$CHPD = 'yes'">
+              <label>
+                <xsl:value-of select="normalize-space(condition/heading-sequence/heading)"/>
+              </label>
+            </xsl:if>
             <unit>
               <xsl:value-of select="for $u in current()//*:unit return
                 (if ($u/@*:regex eq 'yes') 
@@ -165,6 +193,7 @@
               <tab-body-row><xsl:value-of select="$context/@data-rownum"/></tab-body-row>
             </address>
             <notes>
+              <!-- §§§ JATS only -->
               <xsl:for-each select="(for $rid in distinct-values($relevant-col-heading//*:xref/@rid) 
                                      return $relevant-col-heading/ancestor::*:table-wrap[1]//*:fn[@id eq $rid],
                                      for $r in distinct-values($context//*:xref/@rid) 
