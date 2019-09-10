@@ -9,7 +9,8 @@
     <!-- other possibilities: 'HTML', 'XHTML' (namespaced HTML), 'DocBook' (namespaced),
       'DocBook4' (non-namespaced) -->
   </xsl:param>
-  
+  <xsl:param name="terminate-on-error" select="'yes'" as="xs:string"/>
+
   <xsl:param name="CHPD" as="xs:string" select="''"/>
   
   <xsl:variable name="quantity-lookup-criteria" select="collection()[2]"/>  
@@ -31,6 +32,7 @@
     <xsl:copy copy-namespaces="yes">
       <xsl:attribute name="SemEx:thead" select="SemEx:belongs-to-head(.)"/>
       <xsl:apply-templates select="@*" mode="#current"/>
+      <xsl:message select="'ZZZZZZZZZZZ ', name()"></xsl:message>
       <xsl:sequence select="SemEx:quantity-lookup(., $quantity-lookup-criteria)"/>
       <xsl:apply-templates select="node()" mode="#current"/>
     </xsl:copy>
@@ -99,9 +101,18 @@
     </xsl:analyze-string>
   </xsl:function>
   
-  <xsl:function name="SemEx:table-root" as="element(*)">
+  <xsl:function name="SemEx:table-root" as="element(*)?">
     <xsl:param name="context" as="element(*)"/>
-    <xsl:sequence select="$context/ancestor::*[local-name() = ('table', 'informaltable')][1]"/>
+    <xsl:variable name="prelim" as="element(*)?" 
+      select="$context/ancestor::*[local-name() = ('table', 'informaltable')][1]"/>
+    <xsl:choose>
+      <xsl:when test="exists($prelim)">
+        <xsl:sequence select="$prelim"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:message select="'Empty table root: ', $context" terminate="{$terminate-on-error}"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:function>
   
   <xsl:function name="SemEx:quantity-lookup" as="element(SemEx:quantity-lookup)*">
