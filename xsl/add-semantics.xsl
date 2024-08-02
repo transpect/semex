@@ -275,6 +275,4 @@
       </label>
     </with-material-id>
   </xsl:function>
-  
-  
 </xsl:stylesheet>
